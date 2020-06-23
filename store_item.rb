@@ -8,10 +8,10 @@
 
 
 class Fruit
-  def initialize(input_color, input_price, input_freshness)
-    @color = input_color
-    @price = input_price
-    @fresh = input_freshness
+  def initialize(input_options)
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @fresh = input_options[:fresh]
   end
 
   def new_price=(input_price)
@@ -32,9 +32,9 @@ class Fruit
 
 end
 
-fruit1 = Fruit.new("orange", 0.40, true)
-
-#fruit1.new_price(0.39)
+fruit1 = Fruit.new(color: "orange", price: 0.40, fresh: true)
+fruit2 = Fruit.new(color: "green", price: 0.90, fresh: false)
+fruit3 = Fruit.new(color: "silver", price: 2399.99, fresh: true)
 
 puts fruit1.color
 
@@ -43,3 +43,5 @@ fruit1.new_price=(0.22)
 puts fruit1.price
 
 puts fruit1.fresh
+
+#this is a line for a purpose.
