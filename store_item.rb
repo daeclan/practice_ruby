@@ -39,5 +39,7 @@ fruit1 = Fruit.new("orange", 0.40, true)
 puts fruit1.color
 
 puts fruit1.price
+fruit1.new_price=(0.22)
+puts fruit1.price
 
 puts fruit1.fresh
