@@ -45,3 +45,13 @@ puts fruit1.price
 puts fruit1.fresh
 
 #this is a line for a purpose.
+
+class Food < Fruit
+  def shelf_life
+    return "This is not fresh any more."
+  end
+end
+
+sample = Food.new(color: "red", price: 0.68, fresh: false)
+
+p sample.shelf_life
