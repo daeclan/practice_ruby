@@ -13,6 +13,10 @@ class Employee
     puts "#{@first_name} #{@last_name} makes #{@salary} a year."
   end
 
+  def fired
+    @active = false
+  end
+
   def give_annual_raise
     @salary = 1.05 * @salary
   end
@@ -43,7 +47,13 @@ class Manager < Employee
     end
   end
 
-  #While loop, iterating through 
+  def fire_all_employees
+    index = 0
+    while index < @employees.length
+      @employees[index].fired
+      index += 1
+    end
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -52,3 +62,6 @@ manager.send_report
 manager.give_all_raises
 employee1.print_info
 employee2.print_info
+manager.fire_all_employees
+
+puts employee1.active
