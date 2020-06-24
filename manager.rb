@@ -36,7 +36,11 @@ class Manager < Employee
   end
 
   def give_all_raises
-    puts "I am big lost here."
+    index = 0
+    while index < @employees.length
+    @employees[index].give_annual_raise
+    index += 1
+    end
   end
 
   #While loop, iterating through 
@@ -46,3 +50,5 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 manager.print_info
 manager.send_report
 manager.give_all_raises
+employee1.print_info
+employee2.print_info
