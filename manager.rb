@@ -20,6 +20,11 @@ class Employee
   def give_annual_raise
     @salary = 1.05 * @salary
   end
+
+  def brain_bust
+    puts "Why-OOOOOOO!"
+  end
+
 end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
@@ -54,6 +59,11 @@ class Manager < Employee
       index += 1
     end
   end
+
+  def brain_bust
+    puts "Hi-OOOOOOO!"
+  end
+
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -65,3 +75,6 @@ employee2.print_info
 manager.fire_all_employees
 
 puts employee1.active
+
+employee1.brain_bust
+manager.brain_bust
