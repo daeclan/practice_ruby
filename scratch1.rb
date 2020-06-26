@@ -5,23 +5,39 @@
 #   count += 1
 # end
 
-sam_cook = ["pasta", "guacamole", "sandwich", "ramen", "piano bread", "eggs", "buffalo chicken", "pb+j", "hot bread", "wet bread", "dry bread"]
-sally_lang = ["japanese", "croatian", "russian", "bingo", "love", "english"]
+sam_cook = ["pasta", "guacamole", "sandwich", "ramen", "piano bread", "eggs", "buffalo chicken", "pb+j", "hot bread", "wet bread", "dry bread", "crepes"]
+sally_lang = ["japanese", "croatian", "russian", "bingo", "love", "english", "french"]
 
 # p sam_cook.length
 # p sally_lang
 
 
-if sam_cook.length > 10 && sally_lang.length > 5
-  puts "Hooee, y'all should date!"
-else
-  puts "Hoeee, bummer!"
+# if sam_cook.length > 10 && sally_lang.length > 5
+#   puts "Hooeeyyyiiieiiee, y'all should date!"
+# else
+#   puts "Hooooooeeeyyyy, bummer!"
+# end
+
+
+
+index = 0
+sub_index =0
+while index < sam_cook.length
+  if sam_cook[index] == "crepes"
+    while sub_index < sally_lang.length
+      if sally_lang[sub_index] == "french"
+        puts "They should marry!"
+      end
+      sub_index += 1
+    elsif 
+    end
+  end
+  index += 1
 end
 
-#If Sam can cook more than 10 recipes and Sally 
-#speaks more than 5 languages, they should date. 
-#Based on the above arrays, print out a message 
-#describing whether or not they should date.
-#If Sam can make crepes or Sally can speak French, 
-#they should marry. Based on the above arrays, print 
-#out a message describing whether or not they should marry.
+
+#Loop through sam's array to see if he makes the crepes.
+#Loop through Sally's array to see if she speaks Francais.
+
+
+
